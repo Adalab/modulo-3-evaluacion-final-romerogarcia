@@ -1,4 +1,4 @@
-/*function MovieSceneItem(props) {
+function MovieSceneItem(props) {
   return (
     <>
       <img
@@ -13,4 +13,4 @@
     </>
   );
 }
-export default MovieSceneItem;*/
+export default MovieSceneItem;

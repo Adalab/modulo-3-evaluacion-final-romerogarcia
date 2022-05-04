@@ -1,4 +1,4 @@
-/*import MovieSceneItem from './MovieSceneItem';
+import MovieSceneItem from './MovieSceneItem';
 //lista de películas
 function MovieSceneList(props) {
   //tranformar datos del array en un li
@@ -17,4 +17,4 @@ function MovieSceneList(props) {
     </>
   );
 }
-export default MovieSceneList;*/
+export default MovieSceneList;

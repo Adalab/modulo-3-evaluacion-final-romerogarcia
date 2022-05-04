@@ -1,6 +1,6 @@
 function FilterMovie(props) {
-  const handleChange = (ev) => {
-    props.hanldleFilterMovie(ev.target.value);
+  const handleInput = (ev) => {
+    props.handleInputName(ev.target.value);
   };
   return (
     <>
@@ -11,8 +11,8 @@ function FilterMovie(props) {
           type="text"
           name="movie"
           id="movie"
-          value=""
-          onChange={props.handleFilterMovie}
+          value={props.newNameValue}
+          onChange={handleInput}
         ></input>
       </label>
     </>

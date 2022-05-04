@@ -4,7 +4,7 @@ const getList = () => {
   )
     .then((response) => response.json())
     .then((data) => {
-      const cleanData = data.map((item) => {
+      const cleanData = data.map((item, index) => {
         return {
           poster: item.poster,
           movie: item.movie,
@@ -12,6 +12,7 @@ const getList = () => {
           year: item.year,
           director: item.director,
           audio: item.audio,
+          id: index,
         };
       });
       return cleanData;

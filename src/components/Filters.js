@@ -1,12 +1,17 @@
-import FilterMovie from './FilterMovie';
+import FilterName from './FilterName';
 import FilterYear from './FilterYear';
 
 function Filter(props) {
   return (
     <>
-      <FilterMovie handleFilterMovie={props.handleFilterMovie} />
+      <FilterName handleInputName={props.handleInputName} />
 
-      <FilterYear handleFilterYear={props.handleFilterYear} />
+      <FilterYear
+        dataFilter={props.dataFilter}
+        handleInputYear={props.handleInputYear}
+        FilterYear={props.FilterYear}
+        
+      />
     </>
   );
 }

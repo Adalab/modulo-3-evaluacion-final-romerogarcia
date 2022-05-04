@@ -10,10 +10,13 @@ function App() {
   //variables estado
   //guardamos mi lista de datos
   const [dataList, setDataList] = useState([]);
+  //nuevo valor de mi búsqueda
+  const [newNameValue, setNewNameValue] = useState('');
+  //valor filtro year
+  const [FilterYear, setFilterYear] = useState('');
   const [movie, setMovie] = useState('');
   const [year, setYear] = useState('');
   const [filterMovie, setFilterMovie] = useState('all');
-  const [FilterYear, setFilterYear] = useState('');
 
   //useffect para cargar los datos de la api
   useEffect(() => {
@@ -23,38 +26,25 @@ function App() {
     });
   }, []);
 
-  //movies
-  /*const handleMovie = (ev) => {
-    setMovie(ev.target.value);
+  //input nombre película
+  const handleInputName = (value) => {
+    setNewNameValue(value);
   };
 
-  const handleYear = (ev) => {
-    setYear(ev.target.value);
-  };*/
-
-  //filtrar movie
-  const handleFilterMovie = (ev) => {
-    setFilterMovie(ev.target.value);
-  };
-
-  //filtrar year
-  const handleFilterYear = (ev) => {
-    setFilterYear(ev.target.value);
+  //select años
+  const handleInputYear = (value) => {
+    setFilterYear(value);
   };
 
   //datos de las peliculas que pintamos
   const dataFilter = dataList
-    .filter((data) => {
-      if (FilterYear === 'all') {
-        return true;
-      } else if (FilterYear === data.year) {
-        return true;
-      } else {
-        return false;
-      }
+    .filter((movie) => {
+      return movie.movie.toLowerCase().includes(newNameValue.toLowerCase());
     })
-    .filter((data) => {
-      return data.movie.toLowerCase().includes(filterMovie.toLocaleLowerCase());
+    .filter((movie) => {
+      return FilterYear === ''
+        ? true
+        : parseInt(movie.year) === parseInt(FilterYear);
     });
 
   return (
@@ -62,11 +52,13 @@ function App() {
       <h1 className="title--big">Owen Wilson's "wow"</h1>
       <div className="container">
         <Filters
-          handleFilterMovie={handleFilterMovie}
-          handleFilterYear={handleFilterYear}
+          handleInputName={handleInputName}
+          dataFilter={dataFilter}
+          handleInputYear={handleInputYear}
+          FilterYear={FilterYear}
         />
-        {/*Mi lista de peliculas
-        <MovieSceneList movieList={dataList} />*/}
+        {/*Mi lista de peliculas*/}
+        <MovieSceneList movieList={dataFilter} />
       </div>
     </>
   );
