@@ -1,10 +1,11 @@
 import '../styles/App.scss';
-//import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Filters from './Filters';
 //import ls from '../services/localStorage';
 import getList from '../services/Api';
 import MovieSceneList from './MovieSceneList';
+import { Routes, Route } from 'react-router-dom';
+//import { matchPath, useLocation } from 'react-router';
 
 function App() {
   //variables estado
@@ -51,6 +52,12 @@ function App() {
     <>
       <h1 className="title--big">Owen Wilson's "wow"</h1>
       <div className="container">
+        <Routes>
+          {/*primera ruta listado + filtros*/}
+          <Route path="/" element="" />
+          {/*segunda ruta detalles*/}
+          <Route />
+        </Routes>
         <Filters
           handleInputName={handleInputName}
           dataFilter={dataFilter}
