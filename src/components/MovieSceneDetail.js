@@ -14,7 +14,9 @@ function MovieSceneDetail(props) {
 
       <p className="detail__year">{props.movieId.director} </p>
 
-      <a className="detail__link_audio">{props.movieId.audio} </a>
+      <a className="detail__link_audio" href={props.movieId.audio}>
+        Escuchar Audio
+      </a>
     </section>
   );
 }
