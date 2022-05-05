@@ -5,19 +5,18 @@ import Filters from './Filters';
 import getList from '../services/Api';
 import MovieSceneList from './MovieSceneList';
 import { Routes, Route } from 'react-router-dom';
-//import { matchPath, useLocation } from 'react-router';
+//coger datos de las rutas
+import { matchPath, useLocation } from 'react-router';
+import MovieSceneDetail from './MovieSceneDetail';
 
 function App() {
   //variables estado
   //guardamos mi lista de datos
   const [dataList, setDataList] = useState([]);
-  //nuevo valor de mi búsqueda
+  //nuevo valor del nombre mi búsqueda
   const [newNameValue, setNewNameValue] = useState('');
   //valor filtro year
   const [FilterYear, setFilterYear] = useState('');
-  const [movie, setMovie] = useState('');
-  const [year, setYear] = useState('');
-  const [filterMovie, setFilterMovie] = useState('all');
 
   //useffect para cargar los datos de la api
   useEffect(() => {
@@ -48,24 +47,39 @@ function App() {
         : parseInt(movie.year) === parseInt(FilterYear);
     });
 
+  //datos de la película seleccionada por usuario
+  const { pathname } = useLocation();
+  const dataPath = matchPath('/movie/:movieId', pathname);
+  const movieId = dataPath !== null ? parseInt(dataPath.params.movieId) : null;
+  const movieFound = dataList.find((item) => item.id === movieId);
+  console.log({ movieId, movieFound });
   return (
     <>
       <h1 className="title--big">Owen Wilson's "wow"</h1>
       <div className="container">
         <Routes>
           {/*primera ruta listado + filtros*/}
-          <Route path="/" element="" />
+          <Route
+            path="/"
+            element={
+              <>
+                <Filters
+                  handleInputName={handleInputName}
+                  dataFilter={dataFilter}
+                  handleInputYear={handleInputYear}
+                  FilterYear={FilterYear}
+                />
+                {/*Mi lista de peliculas*/}
+                <MovieSceneList movieList={dataFilter} />
+              </>
+            }
+          />
           {/*segunda ruta detalles*/}
-          <Route />
+          <Route
+            path="/movie/:detailMovieId"
+            element={<MovieSceneDetail movieId={movieFound} />}
+          />
         </Routes>
-        <Filters
-          handleInputName={handleInputName}
-          dataFilter={dataFilter}
-          handleInputYear={handleInputYear}
-          FilterYear={FilterYear}
-        />
-        {/*Mi lista de peliculas*/}
-        <MovieSceneList movieList={dataFilter} />
       </div>
     </>
   );
