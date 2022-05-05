@@ -7,7 +7,7 @@ function FilterMovie(props) {
       <label className="filter__label" htmlFor="Movie">
         Movie
         <input
-          className="filter"
+          className="filter__label__input"
           type="text"
           name="movie"
           id="movie"

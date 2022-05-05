@@ -1,4 +1,5 @@
-import '../styles/App.scss';
+import '../styles/ListMovies.scss';
+import '../styles/MovieDetails.scss';
 import { useEffect, useState } from 'react';
 import Filters from './Filters';
 //import ls from '../services/localStorage';
@@ -54,34 +55,32 @@ function App() {
   const movieFound = dataList.find((item) => item.id === movieId);
   console.log({ movieId, movieFound });
   return (
-    <>
+    <div className="background-color">
       <h1 className="title--big">Owen Wilson's "wow"</h1>
-      <div className="container">
-        <Routes>
-          {/*primera ruta listado + filtros*/}
-          <Route
-            path="/"
-            element={
-              <>
-                <Filters
-                  handleInputName={handleInputName}
-                  dataFilter={dataFilter}
-                  handleInputYear={handleInputYear}
-                  FilterYear={FilterYear}
-                />
-                {/*Mi lista de peliculas*/}
-                <MovieSceneList movieList={dataFilter} />
-              </>
-            }
-          />
-          {/*segunda ruta detalles*/}
-          <Route
-            path="/movie/:detailMovieId"
-            element={<MovieSceneDetail movieId={movieFound} />}
-          />
-        </Routes>
-      </div>
-    </>
+      <Routes>
+        {/*primera ruta listado + filtros*/}
+        <Route
+          path="/"
+          element={
+            <>
+              <Filters
+                handleInputName={handleInputName}
+                dataFilter={dataFilter}
+                handleInputYear={handleInputYear}
+                FilterYear={FilterYear}
+              />
+              {/*Mi lista de peliculas*/}
+              <MovieSceneList movieList={dataFilter} />
+            </>
+          }
+        />
+        {/*segunda ruta detalles*/}
+        <Route
+          path="/movie/:detailMovieId"
+          element={<MovieSceneDetail movieId={movieFound} />}
+        />
+      </Routes>
+    </div>
   );
 }
 

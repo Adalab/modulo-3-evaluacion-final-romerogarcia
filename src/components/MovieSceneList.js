@@ -4,15 +4,15 @@ function MovieSceneList(props) {
   //tranformar datos del array en un li
   const listElements = props.movieList.map((movieList) => {
     return (
-      <li className="movie">
+      <li className="list__li">
         <MovieSceneItem movieList={movieList} />
       </li>
     );
   });
   return (
     <>
-      <section>
-        <ul className="ulList">{listElements}</ul>
+      <section className="container_list">
+        <ul className="list">{listElements}</ul>
       </section>
     </>
   );

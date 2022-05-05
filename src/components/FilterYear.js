@@ -12,7 +12,7 @@ function FilterYear(props) {
         value={props.FilterYear}
       >
         Year
-        <select className="filter__select">
+        <select className="filter__label__select">
           <option value="all">All</option>
           <option value="1996">1996</option>
           <option value="2000">2000</option>
