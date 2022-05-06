@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Proyecto Owen Wilson's "Wow"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+¡Hola! 🙋🏻‍♀️
 
-## Available Scripts
+Este es mi proyecto para la evaluación final del módulo **REACT** en Adalab.
 
-In the project directory, you can run:
+Aqui podrás encontrar el desarrollo de una aplicación web donde podemos buscar las películas donde el actor Owen Wilson pronuncia un "Wow". Cuando hacemos click en la película seleccionada, podemos ver más detalles sobre esta, y además, tenemos un enlace del audio de la escena "Wow".
 
-### `npm start`
+_Lenguajes que he utilizado para la maquetación de esta web:_
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- HTML
+- Flexbox
+- SASS para la aplicación de estilos
+- Javascript
+- React
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+_Herramientas que he utilizado para el desarrollo de la maquetación de esta web:_
 
-### `npm test`
+- Node JS
+- Gulp
+- Zepling
+- GitHub
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_¿Cómo puedes arrancar este proyecto?_
 
-### `npm run build`
+Para arrancar este pryecto debemos ejecutar el comando **/npm start/**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Este comando nos abre una ventana en nuestro navegador predeterminado y te muestra mi proyecto.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+/////
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Hi! 🙋🏻‍♀️
 
-### `npm run eject`
+This is my project for the final evaluation of the **REACT** module at Adalab.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Here you can find the development of a web application where we can search for movies where the actor Owen Wilson pronounces a "Wow". When we click on the selected movie, we can see more details about it, and also, we have a link to the audio of the "Wow" scene.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+_Languages I have used for the layout of this website._
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- HTML
+- Flexbox
+- SASS para la aplicación de estilos
+- Javascript
+- React
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+_Tools I have used for the development of the layout of this website._
 
-## Learn More
+- Node JS
+- Gulp
+- Zepling
+- GitHub
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+_How can you start my project?_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To start this project we need to run the command **/npm start/**
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This command opens a window in our default browser and shows you my project.
