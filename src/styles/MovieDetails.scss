@@ -7,20 +7,20 @@
 }
 
 .container_details {
-    margin-left: 320px;
-    width: 700px;
+    margin-left: 350px;
+    width: 600px;
     height: 550px;
 }
 
 .detail {
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 10px;
     margin-top: 90px;
     margin-bottom: 90px;
-    background-color: rgba(247, 253, 158, 0.932);
+    background-color: rgba(204, 204, 204, 0.932);
     display: flex;
     justify-content: center;
     &__img {
-        width: 290px;
+        width: 270px;
         height: 350px;
     }
 

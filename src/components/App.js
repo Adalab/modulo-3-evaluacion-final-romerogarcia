@@ -56,7 +56,18 @@ function App() {
   console.log({ movieId, movieFound });
   return (
     <div className="background-color">
+      <section className="gift_owen">
+        <iframe
+          src="https://giphy.com/embed/udmx3pgdiD7tm"
+          width="250"
+          height="150"
+          frameBorder="0"
+          class="giphy-embed"
+          allowFullScreen
+        ></iframe>
+      </section>
       <h1 className="title--big">Owen Wilson's "wow"</h1>
+
       <Routes>
         {/*primera ruta listado + filtros*/}
         <Route
