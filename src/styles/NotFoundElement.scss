@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@100;500&family=Square+Peg&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.containerNotFound {
+    display: flex;
+    justify-content: center;
+    
+    &__title {
+        font-size: 30px;
+        color: black;
+        padding-top: 40px;
+    }
+    &__linkBack {
+        font-size: 15px;
+        color: rgba(153, 152, 152, 0.788);
+        a:link {
+            text-decoration: none;
+          }
+    }
+}

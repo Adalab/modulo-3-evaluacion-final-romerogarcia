@@ -9,6 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 //coger datos de las rutas
 import { matchPath, useLocation } from 'react-router';
 import MovieSceneDetail from './MovieSceneDetail';
+import NotFoundElement from './NotFoundElement';
 
 function App() {
   //variables estado
@@ -23,7 +24,6 @@ function App() {
   useEffect(() => {
     getList().then((dataFromApi) => {
       setDataList(dataFromApi);
-      console.log('holis');
     });
   }, []);
 
@@ -36,6 +36,17 @@ function App() {
   const handleInputYear = (value) => {
     setFilterYear(value);
   };
+
+  //oredenar alfabéticamente
+  /*const orderedMovies = (movieA, movieB) => {
+    if(movieA.name > movieB.name) {
+      return 1;
+    }
+    if(movieA.name > movieB.name) {
+      return -1;
+    }
+    return 0;
+  };*/
 
   //datos de las peliculas que pintamos
   const dataFilter = dataList
@@ -54,6 +65,7 @@ function App() {
   const movieId = dataPath !== null ? parseInt(dataPath.params.movieId) : null;
   const movieFound = dataList.find((item) => item.id === movieId);
   console.log({ movieId, movieFound });
+
   return (
     <div className="background-color">
       <section className="gift_owen">
@@ -90,6 +102,7 @@ function App() {
           path="/movie/:detailMovieId"
           element={<MovieSceneDetail movieId={movieFound} />}
         />
+        <Route path="*" element={<NotFoundElement />} />
       </Routes>
     </div>
   );

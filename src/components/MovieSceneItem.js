@@ -10,8 +10,8 @@ function MovieSceneItem(props) {
         src={props.movieList.poster}
       />
       <h2 className="list__li__title">{props.movieList.movie} </h2>
-      <p className="list__li__year">{props.movieList.year} </p>
-      <p className="list__li__phrase">{props.movieList.full_line} </p>
+      <p className="list__li__year">- {props.movieList.year} -</p>
+      <p className="list__li__phrase">"{props.movieList.full_line}" </p>
     </Link>
   );
 }

@@ -114,6 +114,7 @@ background-repeat: repeat;
 &__label {
     color: rgb(0, 0, 0);
     font-weight: bold;
+    text-transform: uppercase;
     padding-top: 30px;
     padding-right: 20px;
     padding-left: 20px;
@@ -163,6 +164,7 @@ background-repeat: repeat;
          background-color: rgb(196, 196, 196);      
          display: flex;
          justify-content: center;
+         border-radius: 20px;
 
          :hover{
             background-color: rgb(177, 245, 100);  
@@ -176,6 +178,7 @@ background-repeat: repeat;
             height: 350px;
             display:block;
             margin:auto;
+            border-radius: 10px;
             :hover{
                 background-color: rgb(177, 245, 100);  
              }
