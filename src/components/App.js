@@ -2,7 +2,7 @@ import '../styles/ListMovies.scss';
 import '../styles/MovieDetails.scss';
 import { useEffect, useState } from 'react';
 import Filters from './Filters';
-//import ls from '../services/localStorage';
+import ls from '../services/localStorage';
 import getList from '../services/Api';
 import MovieSceneList from './MovieSceneList';
 import { Routes, Route } from 'react-router-dom';
@@ -19,6 +19,7 @@ function App() {
   const [newNameValue, setNewNameValue] = useState('');
   //valor filtro year
   const [FilterYear, setFilterYear] = useState('');
+  const [FilterWow, setFilterWow] = useState('');
 
   //useffect para cargar los datos de la api
   useEffect(() => {
@@ -35,6 +36,11 @@ function App() {
   //select años
   const handleInputYear = (value) => {
     setFilterYear(value);
+  };
+
+  //select wow
+  const handleInputWow = (value) => {
+    setFilterWow(value);
   };
 
   //oredenar alfabéticamente
@@ -57,8 +63,12 @@ function App() {
       return FilterYear === ''
         ? true
         : parseInt(movie.year) === parseInt(FilterYear);
+    })
+    .filter((movie) => {
+      return FilterWow === ''
+        ? true
+        : parseInt(movie.total_wows_in_movie) === parseInt(FilterWow);
     });
-
   //datos de la película seleccionada por usuario
   const { pathname } = useLocation();
   const dataPath = matchPath('/movie/:movieId', pathname);
@@ -91,6 +101,8 @@ function App() {
                 dataFilter={dataFilter}
                 handleInputYear={handleInputYear}
                 FilterYear={FilterYear}
+                handleInputWow={handleInputWow}
+                FilterWow={FilterWow}
               />
               {/*Mi lista de peliculas*/}
               <MovieSceneList movieList={dataFilter} />
