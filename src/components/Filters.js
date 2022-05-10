@@ -1,5 +1,6 @@
 import FilterName from './FilterName';
 import FilterYear from './FilterYear';
+import FilterWow from './FilterWow';
 
 function Filter(props) {
   return (
@@ -10,6 +11,12 @@ function Filter(props) {
         dataFilter={props.dataFilter}
         handleInputYear={props.handleInputYear}
         FilterYear={props.FilterYear}
+      />
+
+      <FilterWow
+        dataFilter={props.dataFilter}
+        handleInputWow={props.handleInputWow}
+        FilterWow={props.FilterWow}
       />
     </div>
   );

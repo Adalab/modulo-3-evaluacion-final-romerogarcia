@@ -1,18 +1,16 @@
 function FilterYear(props) {
   const handleSelect = (ev) => {
     props.handleInputYear(ev.target.value);
-    console.log('si filtro x año');
   };
   return (
     <>
-      <label
-        className="filter__label"
-        htmlFor="Year"
-        onChange={handleSelect}
-        value={props.FilterYear}
-      >
+      <label className="filter__label" htmlFor="Year">
         Year
-        <select className="filter__label__select">
+        <select
+          className="filter__label__select"
+          onChange={handleSelect}
+          value={props.FilterYear}
+        >
           <option value="all">All</option>
           <option value="1996">1996</option>
           <option value="2000">2000</option>

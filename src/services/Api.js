@@ -13,6 +13,7 @@ const getList = () => {
           director: item.director,
           audio: item.audio,
           id: index,
+          total_wows_in_movie: item.total_wows_in_movie,
         };
       });
       return cleanData;
