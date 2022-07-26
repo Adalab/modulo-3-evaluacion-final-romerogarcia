@@ -2,7 +2,7 @@
 
 function MovieSceneDetail(props) {
   return (
-    <>
+    <div className="container">
       <div className="container_details">
         <section className="detail">
           <img
@@ -68,7 +68,7 @@ function MovieSceneDetail(props) {
         </div>
         <p className="footer__text">&copy; 2022 🐱 Noelia Romero García</p>
       </footer>
-    </>
+    </div>
   );
 }
 export default MovieSceneDetail;

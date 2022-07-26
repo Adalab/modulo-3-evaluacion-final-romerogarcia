@@ -2,7 +2,7 @@ import '../styles/ListMovies.scss';
 import '../styles/MovieDetails.scss';
 import { useEffect, useState } from 'react';
 import Filters from './Filters';
-import ls from '../services/localStorage';
+//import ls from '../services/localStorage';
 import getList from '../services/Api';
 import MovieSceneList from './MovieSceneList';
 import { Routes, Route } from 'react-router-dom';
@@ -10,6 +10,8 @@ import { Routes, Route } from 'react-router-dom';
 import { matchPath, useLocation } from 'react-router';
 import MovieSceneDetail from './MovieSceneDetail';
 import NotFoundElement from './NotFoundElement';
+//logo
+import logo from '../images/logo.png';
 
 function App() {
   //variables estado
@@ -43,17 +45,6 @@ function App() {
     setFilterWow(value);
   };
 
-  //oredenar alfabéticamente
-  /*const orderedMovies = (movieA, movieB) => {
-    if(movieA.name > movieB.name) {
-      return 1;
-    }
-    if(movieA.name > movieB.name) {
-      return -1;
-    }
-    return 0;
-  };*/
-
   //datos de las peliculas que pintamos
   const dataFilter = dataList
     .filter((movie) => {
@@ -78,17 +69,17 @@ function App() {
 
   return (
     <div className="background-color">
-      <section className="gift_owen">
-        <iframe
-          src="https://giphy.com/embed/udmx3pgdiD7tm"
-          width="250"
-          height="150"
-          frameBorder="0"
-          class="giphy-embed"
-          allowFullScreen
-        ></iframe>
+      <header className="header">
+        <img src={logo} className="header__logo" alt="Logo Owen Wilson" />
+        <h1 className="header__title--big">Owen Wilson's "Wow"</h1>
+        <i className="fa-solid fa-bars fa-2x header__i"></i>
+      </header>
+      <section className="section">
+        <p className="section__p">
+          In our database of Owen Wilson's movies you can filter and listen to
+          audio his mythical "WOW", choose the one you like the most.
+        </p>
       </section>
-      <h1 className="title--big">Owen Wilson's "wow"</h1>
 
       <Routes>
         {/*primera ruta listado + filtros*/}
